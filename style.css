@@ -1,0 +1,28 @@
+/* cursor animation */
+.cursor{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(15, 11, 15, 0.299);
+  transform: translate(-50% , -50%);
+  pointer-events: none;
+  transition: .15s;
+}
+.cursor::after{
+  position: fixed;
+  content: "";
+  height: 5px;
+  width: 5px;
+  background-color:rgba(224, 44, 110, 0.437);
+  border-radius: 50%;
+}
+
+.cursorHover{
+  transform: translate(-50% , -50%) scale(2.5);
+}
